@@ -1,18 +1,21 @@
 var Body = {
   setBackgroundColor: function(color) {
-    document.querySelector('body').style.backgroundColor = color;
+    $('body').css('backgroundColor', color);
+    // document.querySelector('body').style.backgroundColor = color;
   },
   setColor: function(color) {
-    document.querySelector('body').style.color = color;
+    $('body').css('color', color);
+    // document.querySelector('body').style.color = color;
   }
 }
 
 var Link = {
   setColor: function(color) {
-    var aList = document.querySelectorAll('a');
-    for (var i = 0; i < aList.length; ++i) {
-      aList[i].style.color = color;
-    }
+    $('a').css('color', color);
+    // var aList = document.querySelectorAll('a');
+    // for (var i = 0; i < aList.length; ++i) {
+    //   aList[i].style.color = color;
+    // }
   }
 }
 
@@ -25,7 +28,7 @@ if (self.value === 'night') {
 } else {
   Body.setBackgroundColor('white');
   Body.setColor('black');
-  Link.setColor('blue');
+  Link.setColor('black');
   self.value = 'night';
 }
 }
